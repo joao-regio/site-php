@@ -1,34 +1,34 @@
 <?php
 
-    require_once ("./phpmailer/src/PHPMailer.php");
-    require_once ('./phpmailer/src/SMTP.php');
-    require_once ('./phpmailer/src/Exception.php');
-
-
     use \PHPMailer\PHPMailer\PHPMailer;
     use \PHPMailer\PHPMailer\SMTP;
     use \PHPMailer\PHPMailer\Exception;
 
+
+    require 'classes\phpmailer\vendor\autoload.php';
+
     class Email
     {
+
         function __construct()
         {
-           
-            $mail = new PHPMailer(true);
+    
+            $mail = new PHPMailer();
 
             try{
                 //configurações do servidor
                 $mail->SMTPDebug = SMTP::DEBUG_SERVER;
                 $mail->isSMTP();
-                $mail->Host = 'smtp.gmail.com';                          //host do dominio ou dependencia
+                $mail->Host = 'smptp.gmail.com';                          //host do dominio ou dependencia
                 $mail->SMTPAuth = true;
                 $mail->Username = 'contatojvregio@gmail.com';            //email
                 $mail->Password = 'ContatoJVRegio';                      //senha do email
+                $mail->SMTPSecure = 'tls';
                 $mail->Port = 587;                                       //porta do servidor do email
 
-                //de quem para quem
-                $mail->setFrom('contatojvregio@gmail.com','Joao');       //qual é o endereço do email
-                $mail->addAddress('jv2005.jvar@gmail.com','Joao');       //qual é o remetente
+                //do remetente ao destinatário
+                $mail->setFrom('contatojvregio@gmail.com','Joao');       //qual é o remetente
+                $mail->addAddress('jv2005.jvar@gmail.com','Joao');       //qual é o destinatário
                 
                 //email
                 $mail->Subject = 'Teste';                                     //assunto do email
@@ -36,10 +36,13 @@
                 $mail->AltBody = 'Testando disparo de <b>email</b>';          //corpo do email sem código html
 
                 if(!$mail->send()){
-                    echo '<script>alert("msg não enviada");</script>';
+                    echo 'msg não enviada';
+                    return false;
                 }else{
-                    echo '<script>alert("msg enviada");</script>';
+                    echo 'msg enviada';
+                    return true;
                 }
+                
             }catch(Exception $e){
                 echo '<script> alert("mensagem não enviada"); </script>';
             }
