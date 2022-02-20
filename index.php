@@ -15,7 +15,6 @@
     <title>projeto</title>
 </head>
 <body>
-<?php new Email(); ?>
 <base base="<?php echo INCLUDE_PATH; ?>" />
     <?php
         $url = isset($_GET['url']) ? $_GET['url'] : 'home';

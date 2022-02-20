@@ -17,23 +17,23 @@
 
             try{
                 //configurações do servidor
-                $mail->SMTPDebug = SMTP::DEBUG_SERVER;
                 $mail->isSMTP();
-                $mail->Host = 'smptp.gmail.com';                          //host do dominio ou dependencia
+                $mail->Host = 'smtp.office365.com';                             //host do dominio ou dependencia
                 $mail->SMTPAuth = true;
-                $mail->Username = 'contatojvregio@gmail.com';            //email
-                $mail->Password = 'ContatoJVRegio';                      //senha do email
+                $mail->Username = 'joaovregio@outlook.com';                     //email
+                $mail->Password = 'DogItalia2';                                 //senha do email
                 $mail->SMTPSecure = 'tls';
-                $mail->Port = 587;                                       //porta do servidor do email
+                $mail->Port = 587;                                              //porta do servidor do email
 
                 //do remetente ao destinatário
-                $mail->setFrom('contatojvregio@gmail.com','Joao');       //qual é o remetente
-                $mail->addAddress('jv2005.jvar@gmail.com','Joao');       //qual é o destinatário
+                $mail->setFrom('joaovregio@outlook.com','Joao');                //qual é o remetente
+                $mail->addAddress('jv2005.jvar@gmail.com','Rodrigo');       //qual é o destinatário
+                $mail->isHTML(true);
                 
                 //email
-                $mail->Subject = 'Teste';                                     //assunto do email
-                $mail->Body = 'Testando disparo de <b>email</b>';             //corpo do email com código html
-                $mail->AltBody = 'Testando disparo de <b>email</b>';          //corpo do email sem código html
+                $mail->Subject = 'Teste';                                         //assunto do email
+                $mail->Body = 'Testando disparo de <b>email</b>';               //corpo do email com código html
+                $mail->AltBody = 'Testando disparo de email';                   //corpo do email sem código html
 
                 if(!$mail->send()){
                     echo 'msg não enviada';
