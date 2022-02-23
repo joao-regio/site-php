@@ -22,7 +22,6 @@
             case 'sobre':
                 echo "<target target='sobre' />";
                 break;
-        
             case 'servicos':
                 echo "<target target='servicos' />";
                 break;
