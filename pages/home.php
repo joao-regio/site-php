@@ -63,21 +63,21 @@
     <section class="especialidades">
         <div class="center">
             <h2 class="title">especialidades</h2>
-            <div class="w33 left box-especialidades">
-                <h3><i class="fa fa-css3" aria-hidden="true"></i></h3>
-                <h4>CSS3</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet est vitae risus euismod ornare in suscipit tortor.
-                Aliquam id luctus ligula, ut rutrum mauris. Nullam mattis mattis porttitor.
-                Sed venenatis tortor quam, nec pulvinar elit elementum quis.</p>
-            </div><!--w33 left box-especialidades-->
-            <div class="w33 left box-especialidades">
+            <div class="w33 left box-especialidades html-animate">
                 <h3><i class="fa fa-html5" aria-hidden="true"></i></h3>
                 <h4>Html5</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet est vitae risus euismod ornare in suscipit tortor.
                 Aliquam id luctus ligula, ut rutrum mauris. Nullam mattis mattis porttitor.
                 Sed venenatis tortor quam, nec pulvinar elit elementum quis.</p>
             </div><!--w33 left box-especialidades-->
-            <div class="w33 left box-especialidades">
+            <div class="w33 left box-especialidades css-animate">
+                <h3><i class="fa fa-css3" aria-hidden="true"></i></h3>
+                <h4>CSS3</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet est vitae risus euismod ornare in suscipit tortor.
+                Aliquam id luctus ligula, ut rutrum mauris. Nullam mattis mattis porttitor.
+                Sed venenatis tortor quam, nec pulvinar elit elementum quis.</p>
+            </div><!--w33 left box-especialidades-->
+            <div class="w33 left box-especialidades javascript-animate">
                 <h3><i class="fa fa-codepen" aria-hidden="true"></i></h3>
                 <h4>Javascript</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet est vitae risus euismod ornare in suscipit tortor.
@@ -133,3 +133,8 @@
             <div class="clear"></div>
         </div><!--center-->
     </section><!--extras-->
+<script>
+    ScrollReveal().reveal('.html-animate', { delay: 600 });
+    ScrollReveal().reveal('.css-animate', { delay: 1000 });
+    ScrollReveal().reveal('.javascript-animate', { delay: 1500 });
+</script>
