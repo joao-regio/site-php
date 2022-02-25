@@ -3,31 +3,11 @@
     <div style= "background-image: url('<?php echo INCLUDE_PATH; ?>images/work-2.jpg')" class="banner-single"></div>
     <div style= "background-image: url('<?php echo INCLUDE_PATH; ?>images/work-3.jpg')" class="banner-single"></div>
     <div class="overlay"></div>
-    <div class="center">
-    <?php
-        if(isset($_POST['acao'])){
-            //formulário enviado
-            if($_POST['email'] != ''){
-                $email = $_POST['email'];
-                    $mail = new Email('smtp.office365.com', 'joaovregio@outlook.com','João');
-
-                    $mail->adicionarEndereco($email,'João');
-
-                    $info = array('assunto'=>'Email cadastrado','corpo'=>'Seu email foi cadastrado no site com sucesso');
-                    $mail->formatarEmail($info);
-                    if($mail->enviarEmail()){
-                        echo "<script>alert('email enviado')</script>";
-                    }else{
-                        echo "<script>alert('email não enviado')</script>";
-                    }
-            }else{
-                echo "<script>alert('campos vazios não são permitidos')</script>";
-            }
-        }
-    ?>
+    <div class="center">    
         <form method="post">
             <label for="email">Qual seu melhor email</label>
-            <input type="email" name="email" placeholder="Seu email..." required />  
+            <input type="email" name="email" placeholder="Seu email..." required />
+            <input type="hidden" name="identificador" value="form_home">  
             <input type="submit" name="acao" value="cadastrar" />
         </form>
         <div class="bullets"></div>

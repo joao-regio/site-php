@@ -16,6 +16,42 @@
     <title>projeto</title>
 </head>
 <body>
+<?php
+    if(isset($_POST['acao']) && $_POST['identificador'] == 'form_home'){
+        //formulário enviado
+        if($_POST['email'] != ''){
+            $email = $_POST['email'];
+                $mail = new Email('smtp.office365.com', 'joaovregio@outlook.com','João');
+
+                $mail->adicionarEndereco($email,'João');
+
+                $info = array('assunto'=>'Email cadastrado','corpo'=>'Seu email foi cadastrado no site com sucesso');
+                $mail->formatarEmail($info);
+                if($mail->enviarEmail()){
+                    echo "<script>alert('email enviado')</script>";
+                }else{
+                    echo "<script>alert('email não enviado')</script>";
+                }
+        }else{
+            echo "<script>alert('campos vazios não são permitidos')</script>";
+        }
+    }elseif (isset($_POST['acao']) && $_POST['identificador'] == 'form_contato') {
+        $email = $_POST['email'];
+        $mensagem = $_POST['mensagem'];
+        $nome = $_POST['nome'];
+        $mail = new Email('smtp.office365.com', 'joaovregio@outlook.com','João');
+
+        $mail->adicionarEndereco($email,$nome);
+
+        $info = array('assunto'=>'Email cadastrado','corpo'=>'Seu email foi cadastrado no site com sucesso');
+        $mail->formatarEmail($info);
+        if($mail->enviarEmail()){
+            echo "<script>alert('email enviado')</script>";
+        }else{
+            echo "<script>alert('email não enviado')</script>";
+        }
+    }
+?>
 <base base="<?php echo INCLUDE_PATH; ?>" />
     <?php
         $url = isset($_GET['url']) ? $_GET['url'] : 'home';
