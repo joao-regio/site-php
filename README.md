@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 # site-php
-=======
+
 <img src="images/readme/imagem-site.gif" />
 <h1 align="center"> Site feito com PHP </h1>
 <p align="center">Projeto para agência feito com php</p>
@@ -29,4 +29,4 @@ As seguintes ferramentas utilizadas no projeto
 # Autor
 <img style="width:200px; height:200px; border-radius:150px;" src="images/foto-autor.jpg" />
 <p>João Régio</p>
->>>>>>> 5cd45593bfd745c26e6b977915411c20d6b3c82f
+
