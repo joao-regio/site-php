@@ -12,8 +12,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="descrição do site">
-    <meta name="keywords" content="futebol,caneta,chapeu">
-    <title>projeto</title>
+    <meta name="keywords" content="agencia">
+    <title> <?php echo '<nome da agência>';?> </title>
 </head>
 <body>
 <?php
@@ -23,7 +23,7 @@
             $email = $_POST['email'];
                 $mail = new Email('smtp.office365.com', 'joaovregio@outlook.com','João');
 
-                $mail->adicionarEndereco($email,'João');
+                $mail->adicionarEndereco($email,'Empresa');
 
                 $info = array('assunto'=>'Email cadastrado','corpo'=>'Seu email foi cadastrado no site com sucesso');
                 $mail->formatarEmail($info);
@@ -41,7 +41,7 @@
         $nome = $_POST['nome'];
         $mail = new Email('smtp.office365.com', 'joaovregio@outlook.com','João');
 
-        $mail->adicionarEndereco($email,$nome);
+        $mail->adicionarEndereco($email,'Empresa');
 
         $info = array('assunto'=>'Email cadastrado','corpo'=>'Seu email foi cadastrado no site com sucesso');
         $mail->formatarEmail($info);
@@ -111,6 +111,6 @@
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/script.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
-    <script src="<?php echo INCLUDE_PATH; ?>js/exemplo.js"></script>
+    <!--<script src="<?php echo INCLUDE_PATH; ?>js/exemplo.js"></script>-->
 </body>
 </html>  

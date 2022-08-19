@@ -44,7 +44,7 @@ html,body{
 
 header{
     padding: 20px 0;
-    background-color: #3d437a;
+    background-color: #5e3ea1;
 }
 
 header .logomarca{
@@ -211,7 +211,7 @@ section.especialidades h2.title{
 
 section.extras{
     padding: 30px 0;
-    background: #404580;
+    background-color: #4B3285;
 }
 
 .servicos-container,.depoimentos-container{
@@ -255,7 +255,7 @@ div.servicos li{
 }
 
 footer{
-    background: #313462;
+    background-color: #5e3ea7;
     padding: 30px 0;
 }
 
@@ -294,23 +294,39 @@ section.error-404 p{
 }
 
 .contato-container{
-    padding: 40px 0;
+    padding: 50px 0;
     text-align: center;
 }
 
+.contato-container form{
+    width: 65%;
+    height: 450px;
+    box-shadow: 6px 8px 25px 12px rgba(0,0,0,0.45);
+    border-radius: 15px;
+    margin: 10px auto;
+}
+
+.contato-container form h2{
+    color: black;
+}
+
 .contato-container input{
-    margin: 8px 0;
+    margin: 15px 10px;
     width: 100%;
     max-width: 700px;
+    height: 47px;
     border: 1px solid #ccc;
+    border-radius: 10px;
     font-size: 15px;
     color: #444;
     padding-left: 8px;
+
 }
 
-.contato-container textarea{
+.contato-container form textarea{
     margin: 8px 0;
     width: 100%;
+    height: 70px;
     max-width: 700px;
     border: 1px solid #ccc;
     font-size: 15px;
@@ -321,10 +337,19 @@ section.error-404 p{
 
 .contato-container button[type=submit]{
     background-color: #00C59E;
-    width: 140px;
-    height: 40px;
+    width: 300px;
+    height: 50px;
+    margin-top: 10px;
     color: white;
-    font-size: 18px;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.contato-container button[type=submit]:hover{
+    width: 350px;
+    height: 55px;
+    background-color: #00a785;
+    font-size: 24px;
 }
 
 .bullets{

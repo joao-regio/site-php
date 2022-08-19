@@ -4,8 +4,8 @@
     <div style= "background-image: url('<?php echo INCLUDE_PATH; ?>images/work-3.jpg')" class="banner-single"></div>
     <div class="overlay"></div>
     <div class="center">    
-        <form method="post">
-            <label for="email">Qual seu melhor email</label>
+        <form method="post" autocomplete="off">
+            <label for="email">Qual seu melhor email?</label>
             <input type="email" name="email" placeholder="Seu email..." required />
             <input type="hidden" name="identificador" value="form_home">  
             <input type="submit" name="acao" value="cadastrar" />
