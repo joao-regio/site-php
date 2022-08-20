@@ -111,18 +111,69 @@ html,body{
 
 
 aside{
+    overflow-x: hidden;
     overflow-y: auto;
     float: left;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 22%;
     height: 100%;
     background-color: #310a84;
 }
 
 header{
-    float: right;
+    position: relative;
+    left: 22%;
     width: 78%;
     padding: 10px 0;
     background-color: #6631d5;
+}
+
+.menu-mobile{
+    float: left;
+}
+
+.menu-btn{
+    color: #fff;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.box-usuario{
+    text-align: center;
+}
+
+.avatar-usuario{
+    text-align: left;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid #fff;
+    background-color: #9070d5;
+}
+
+.avatar-usuario i{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 25px;
+    color: #fff;
+}
+
+.nome-usuario{
+    color: #fff;
+    margin-top: 4px;
+}
+
+.nome-usuario p{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: .2px;
 }
 
 .logout{
@@ -136,5 +187,55 @@ header{
     cursor: pointer;
 }
 
+/*conteudo principal painel*/
 
+.w100{
+    width: 100%;
+}
 
+.w50{
+    width: 49%;
+    background-color: blue !important;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+main{
+    position: relative;
+    left: 22%;
+    width: 78%;
+    padding: 10px;
+    float: left;
+}
+
+section.box-content{
+    height: 10px;
+    background-color: red;
+    margin-bottom: 10px;
+}
+
+/*menu mobile*/
+
+@media screen and (max-width: 768px){
+
+    aside{
+        display: none;
+    }
+
+    main{
+        width: 100%;
+        left: 0;
+    }
+
+    header{
+        left: 0;
+        width: 100%;
+    }
+
+}

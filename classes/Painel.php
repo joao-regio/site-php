@@ -10,6 +10,16 @@
             session_destroy();
             header('Location: '.INCLUDE_PATH_PAINEL);
         }
+
+        public static function pegaCargo($cargo){
+            $arr = [
+                '0' => 'Normal',
+                '1' => 'Sub-administrador',
+                '2' => 'Administrador'
+            ];
+
+            return $arr[$cargo];
+        }
     }
 
 ?>

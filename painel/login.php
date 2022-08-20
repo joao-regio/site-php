@@ -29,7 +29,10 @@
                     $info = $sql->fetch();
                     $_SESSION['login'] = true;
                     $_SESSION['user'] = $user;
-                    $_SESSION['password'] = $password;                    
+                    $_SESSION['password'] = $password;
+                    $_SESSION['nome'] = $info['nome'];
+                    $_SESSION['cargo'] = $info['cargo'];
+                    $_SESSION['image'] = $info['image'];               
                     
                     echo '<script>window.location.replace("http://localhost/site-php/painel/");</script>';
                     die();
