@@ -7,20 +7,22 @@
 
 html,body{
     height: 100%;
-    background-image: linear-gradient(45deg, cyan, yellow);
+    background-color: #e2e2e2;
 }
+
+/*página de login*/
 
 .box-error p{
     color: #fff;
 }
 
 .box-login{
-    box-shadow: 10px 10px 10px ;
+    box-shadow: 8px 8px 8px ;
     max-width: 600px;
     width: 95%;
-    height: 320px;
+    height: 370px;
     padding: 40px 2%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(3, 3, 3, 0.9);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -28,6 +30,7 @@ html,body{
     -ms-transform: translate(-50%,-50%);
     border-radius: 12px;
 }
+
 
 .box-login h2{
     text-align: center;
@@ -47,10 +50,18 @@ html,body{
     outline: none;
 }
 
+.box-login img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    margin: 17px -40px;
+}
+
 .box-login button{
     position: absolute;
     left: 50%;
-    bottom: 20%;
+    bottom: 18%;
     transform: translate(-50%);
     width: 80%;
     height: 35px;
@@ -69,3 +80,61 @@ html,body{
     height: 39px;
     font-size: 17px;
 }
+
+.box-error{
+    text-align: center;
+    padding: 6px 2%;
+    color: #fff;
+    background-color: #E61212;
+    margin-bottom: 22px;
+    border-radius: 6px;
+}
+
+.box-error p{
+    font-size: 17px;
+}
+
+.box-error i{
+    padding: 0 3px;
+}
+
+/*painel de controle*/
+
+.clear{
+    clear: both;
+}
+
+.center{
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+
+aside{
+    overflow-y: auto;
+    float: left;
+    width: 22%;
+    height: 100%;
+    background-color: #310a84;
+}
+
+header{
+    float: right;
+    width: 78%;
+    padding: 10px 0;
+    background-color: #6631d5;
+}
+
+.logout{
+    float: right;
+}
+
+.logout a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+
